@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,700&family=Oswald:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #34497C;
+    --color2: #4B69B1;
+    --color3: #585858;
+    --color4: #828282;
+    --color5: #FBA702;
+    --color6: #253458;
+
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    color: var(--color1)
+}
+
+.header {
+    background-color: var(--color1);
+    color: #fff;
+}
+
+.logo {
+    text-align: center;
+}
+
+.header .row {
+    min-height: 110px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .header img {
+        width: 100%;
+    }
+
+    .form_wrapper form {
+        padding: 50px 30px;
+    }
+
+    form h2 {
+        background-image: url(/im/Group\ 10.png);
+    }
+
+    ;
+}
+
+
+.form {
+    background-image: url(./im/b846355c7b9411ac762bc2b1499df243.jfif);
+    background-position: center top;
+    background-size: cover;
+    padding: 70px;
+    color: #fff;
+}
+
+.form_wrapper form {
+    background-color: var(--color2);
+    padding: 50px 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    margin: 7.5px 0;
+    padding: 15px 30px;
+    background-color: var(--color6);
+    color: #fff;
+}
+
+button {
+    border-radius: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 45px;
+}
+
+button:hover {
+    background-color: #172138;
+}
+
+input:focus {
+    background-color: #172138;
+    color: #fff;
+}
+
+form h2 {
+
+    background-repeat: repeat-x;
+    background-position: center;
+    font-size: 36PX;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+form span {
+    display: inline-block;
+    background-color: var(--color2);
+    padding: 15px 30px;
+}
+
+form p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.form_ribbon {
+    background-image: url(/im/lenta.png);
+    background-repeat: repeat-x;
+    height: 117px;
+    margin: 30px -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form_ribbon::before {
+    left: 0;
+    border-left: 15px solid transparent;
+}
+
+.form_ribbon::after {
+    border-right: 15px solid transparent;
+    right: 0;
+}
+
+.form_ribbon::before,
+.form_ribbon::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 15px solid #A86F00;
+    bottom: -15px;
+}
+
+.steps {
+    padding: 50px 0;
+    background-image: url(/im/1212.png);
+    text-align: center;
+
+}
+
+.steps_pic {
+    padding: 35px 0;
+    background-color: var(--color2);
+    position: relative;
+    margin: 30px 0;
+}
+
+.steps h3 {
+    color: var(--color6);
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+.steps_pic::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 15px solid var(--color2);
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+bottom: -15px;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.step_item:hover .steps_pic{
+    background-color: var(--color5);
+}
+.step_item:hover .steps_pic::after {
+    border-top: 15px solid var(--color5);
+}
+@keyframes shake {
+    0%, 40%, 80% {transform: translateX(-10px);}
+    20%, 60%, 100%{transform: translateX(10px);}
+}
+.step_item:hover {
+    animation-name: shake;
+    animation-duration: 0.5s;
+
+}
